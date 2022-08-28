@@ -22,12 +22,10 @@ public abstract class MoveBehavior {
      * @param speed     The speed at which the character moves 1, 2, 3. 1 is slow, 3
      *                  is fast
      */
-    public void move(ArrayList<String> character, int speed) 
-    {
-        for (int i = 0; i < NUM_MOVES; i++)
-        {
+    public void move(ArrayList<String> character, int speed) {
+        for (int i = 0; i < NUM_MOVES; i++) {
             displayCharacter(character);
-            sleep(DEFAULT_SPEED/speed);
+            sleep(DEFAULT_SPEED / speed);
             pushCharacterForward(character);
             clear();
         }
