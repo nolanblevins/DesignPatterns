@@ -1,5 +1,4 @@
 package strategy;
-import java.util.ArrayList;
 
 public class DogRobot extends Robot {
 

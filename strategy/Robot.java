@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public abstract class Robot 
 {
-    public String name;
-    public ArrayList<String> character;
-    public MoveBehavior moveBehavior;
+    protected String name;
+    protected ArrayList<String> character;
+    protected MoveBehavior moveBehavior;
 
     /**
      * @param name the name of the robot
