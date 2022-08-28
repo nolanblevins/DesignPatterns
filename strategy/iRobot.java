@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 public class iRobot extends Robot {
 
-    public iRobot(String name) 
-    {
+    /**
+     * Sets iRobot values
+     * 
+     * @param name        The name of the robot
+     * @param character The displayed character 
+     * @param moveBehavior calls designated behvior for robot
+     */
+    public iRobot(String name) {
         super(name);
         moveBehavior = new RunBehavior();
         character.add(0,"( )");
@@ -13,8 +19,7 @@ public class iRobot extends Robot {
         character.add(2,"/ \\");
     }
     // prints concatenated string of robot name plus the type of robot
-    public String toString() 
-    {
+    public String toString() {
         return this.name + " is an iRobot";
     }
     

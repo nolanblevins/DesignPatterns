@@ -3,8 +3,14 @@ import java.util.ArrayList;
 
 public class DogRobot extends Robot {
 
-    public DogRobot(String name) 
-    {
+    /**
+     * Sets DogRobot values
+     * 
+     * @param name        The name of the robot
+     * @param character The displayed character 
+     * @param moveBehavior calls designated behvior for robot
+     */
+    public DogRobot(String name) {
         super(name);
         moveBehavior = new CrawlBehavior();
         character.add("++o"); 

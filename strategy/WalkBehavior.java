@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class WalkBehavior extends MoveBehavior {
 
-    public void move(ArrayList<String> character) // used by the HumanRobot class for its move behavior
-    {
+    /* 
+     * passes character and speed into move method in order to move character
+     * @see strategy.MoveBehavior#move(java.util.ArrayList)
+     */
+    public void move(ArrayList<String> character) {
         move(character, 2);
-
     }
     
 }
