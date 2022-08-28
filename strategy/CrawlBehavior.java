@@ -7,7 +7,7 @@ public class CrawlBehavior extends MoveBehavior {
     
     public void move(ArrayList<String> character) 
     {
-        move(character, 200);
+        move(character, 1);
     }
     
 }

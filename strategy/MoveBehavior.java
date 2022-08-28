@@ -27,7 +27,7 @@ public abstract class MoveBehavior {
         for (int i = 0; i < NUM_MOVES; i++)
         {
             displayCharacter(character);
-            sleep(speed);
+            sleep(DEFAULT_SPEED/speed);
             pushCharacterForward(character);
             clear();
         }

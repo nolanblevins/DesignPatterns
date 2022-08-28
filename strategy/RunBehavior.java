@@ -6,7 +6,7 @@ public class RunBehavior extends MoveBehavior{
 
     public void move(ArrayList<String> character) 
     {
-        move(character, 300);
+        move(character, 3);
 
     }
     
