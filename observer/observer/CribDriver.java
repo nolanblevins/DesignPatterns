@@ -6,7 +6,7 @@ public class CribDriver {
 		Baby baby = new Baby("Charlie");
 		Observer dad = new Dad(baby);
 		Observer mom = new Mom(baby);
-		
+
 		System.out.println("\n***** " + baby.getName() + " was put down in his crib. *****\n");
 		baby.angryCry();
 
