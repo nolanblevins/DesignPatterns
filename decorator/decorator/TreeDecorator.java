@@ -15,9 +15,11 @@ public abstract class TreeDecorator extends Tree {
                 char[] tempLine = lines.get(j).toCharArray();
                 for(int k = 0; k < tempLine.length; k++)
                 {
-                    if(tempDecor[k] == tempLine[k] && tempLine[k] == ' ');
+                    if(tempDecor[k] != tempLine[k] && tempLine[k] == '\s');
                     {
+                        if(tempLine[k] == ' '){
                         tempLine[k] = tempDecor[k];
+                        }
                     }
                     
                 }
