@@ -1,4 +1,3 @@
-package decorator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,7 +20,6 @@ public class FileReader {
             System.out.println("Error reading file.");
             e.printStackTrace();
         }
-        
 
         return lines;
 

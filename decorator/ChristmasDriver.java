@@ -1,4 +1,3 @@
-package decorator;
 
 public class ChristmasDriver {
 
