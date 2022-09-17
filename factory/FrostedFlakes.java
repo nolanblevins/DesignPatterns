@@ -11,6 +11,9 @@ public class FrostedFlakes extends Cereal {
     }
     @Override
     public String prepare() {
-        return super.prepare();
+        return super.prepare()+"\n"+
+        "\t"+"- Gather the grain"+"\n"+
+        "\t"+"- Shape into flakes"+"\n"+
+        "\t"+"- Sprinkle with frosting"+"\n";
     }
 }
