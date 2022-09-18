@@ -48,7 +48,7 @@ public abstract class Cereal {
      */
     public String boxCereal() {
         int index = (int) (Math.random() * toys.size());
-        return "Boxing" + name + "\n" +
+        return "Boxing " + name + "\n" +
                 "\t" + "- Drawing fun pictures of " + name + " on the box" + "\n" +
                 "\t" + "- Pouring the " + name + " into the box" + "\n" +
                 "\t" + "- adding the surprise " + toys.get(index) + "\n";
