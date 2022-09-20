@@ -11,10 +11,15 @@ public class Assignment {
 
     }
     public boolean hasTopic(Topic topic){
+        if(topic.equals(this.topic)){
+            return true;
+        }
         return false;
+        
+
 
     }
     public String toString(){
-        return null;
+        return title+": "+description;
     }
 }

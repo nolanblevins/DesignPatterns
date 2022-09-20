@@ -14,7 +14,7 @@ public class AssignmentIterator implements Iterator{
     }
     public Assignment next(){
         if(!hasNext()) return null;
-         return assignments[++position]; 
+         return assignments[position++]; 
 
     }
     

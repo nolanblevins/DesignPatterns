@@ -112,7 +112,7 @@ public class CourseDriver {
 	 * @param topic The topic to show the assignments for
 	 */
 	private void displayAssignments(Topic topic) {
-		CourseIterator assignmentIterator = csce247.createIterator();
+		AssignmentIterator assignmentIterator = csce247.createIterator();
 
 		while (assignmentIterator.hasNext()) {
 			Assignment assignment = assignmentIterator.next();
@@ -151,15 +151,14 @@ public class CourseDriver {
 		try {
 			num = Integer.parseInt(in.nextLine()) - 1;
 		} catch (Exception e) {
-			System.out.println("You need to enter a valid number\n");
 			clear();
+			System.out.println("You need to enter a valid number\n");
 			return -1;
 		}
 
 		clear();
 
 		if (num < 0 || num > 4) {
-			clear();
 			System.out.println("Sorry, your option is not in the valid range.\n");
 			return -1;
 		}
