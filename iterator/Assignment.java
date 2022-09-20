@@ -4,6 +4,7 @@ public class Assignment {
     private String title;
     private String description;
     private Topic topic;
+    
     public Assignment(String title, String description, Topic topic){
         this.title = title;
         this.description = description;

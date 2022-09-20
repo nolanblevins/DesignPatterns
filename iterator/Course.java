@@ -9,8 +9,7 @@ public class Course {
     public Course(String name, String title){
         this.name = name;
         this.title = title;
-        assignments = new Assignment[1];
-
+        this.assignments = new Assignment[5];
     }
     public void addAssignment(String title, String description, Topic topic){
         if(count == assignments.length){
