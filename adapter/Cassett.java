@@ -2,40 +2,80 @@ package adapter;
 
 import java.util.ArrayList;
 
-public class Cassett implements AnalogAlbum{
+/**
+ * Nolan Blevins
+ * 
+ * Class for the management of the casset and its methods
+ */
+public class Cassett implements AnalogAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
 
     public Cassett(ArrayList<String> songs) {
         this.songs = songs;
+        currentIndex = 0;
     }
-    
 
-    @Override
+    /**
+     * Method to play a song
+     * 
+     * @return will return the album playing the next song
+     */
     public String play() {
-        return null;
+
+        if (currentIndex == songs.size()) {
+            return "at the end of the cassete you need to rewind";
+
+        } else
+            currentIndex += 1;
+        return "playing song " + (currentIndex) + ": " + songs.get(currentIndex - 1);
     }
 
-    @Override
+    /**
+     * Method to rewind the song
+     * 
+     * @return will return the album playing the last song
+     */
     public String rewind() {
-        return null;
+        if (currentIndex == 0) {
+            return "Fully re-wound";
+        } else
+            currentIndex = currentIndex - 1;
+        return "Rewinding to song number " + (currentIndex + 1);
     }
 
-    @Override
+    /**
+     * Method to play next song
+     * 
+     * @return will return the albums next song
+     * 
+     */
     public String ffwd() {
-        return null;
+        if (currentIndex == songs.size() - 1) {
+            return "Forwarded to the end of the cassette";
+        } else if (currentIndex == songs.size()) {
+            return "At the end of the cassette you need to rewind";
+        } else
+            currentIndex += 1;
+        return "Forward to song " + (currentIndex + 1);
     }
 
-    @Override
+    /**
+     * Method to pause current song
+     * 
+     * @return will return that the song is paused
+     */
     public String pause() {
-        return null;
+        return "Pausing...";
     }
 
-    @Override
+    /**
+     * Method to end play session
+     * 
+     * @return will return that the session is stopping
+     */
     public String stopEject() {
-        return null;
+        return "Stopping cassete and ejecting";
     }
 
-    
-    
 }

@@ -2,42 +2,95 @@ package adapter;
 
 import java.util.ArrayList;
 
-public class CD implements DigitalAlbum{
+/**
+ * Nolan Blevins
+ * 
+ * Class to manage the cd and its methods
+ */
+public class CD implements DigitalAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
 
     public CD(ArrayList<String> songs) {
         this.songs = songs;
+        currentIndex = 0;
     }
 
-    @Override
+    /**
+     * Method will play first song in list
+     * 
+     * @return will return the cd to the first song in the list
+     */
     public String playFromBeginning() {
-        return null;
+        currentIndex = 0;
+        return "Playing song 1 " + songs.get(currentIndex);
     }
 
-    @Override
+    /**
+     * Method to play a specific song on the cd based upon its number
+     * 
+     * @param num is the song number the user wants to play
+     * @return will return that the song the user selected is playing
+     */
     public String playSong(int num) {
-        return null;
+        if (num < 0 || num > songs.size()) {
+            return "not a valid songs number";
+        } else if (currentIndex == songs.size() - 1) {
+            for (int i = songs.size() + 1; i > songs.size(); i--) {
+                prevSong();
+            }
+
+        } else
+            currentIndex = num;
+        return "Playing " + currentIndex + ": " + songs.get(currentIndex - 1);
     }
 
-    @Override
+    /**
+     * Method to go to the previous song
+     * 
+     * @return will return the album playing the last song
+     */
     public String prevSong() {
-        return null;
+        if (currentIndex == 0) {
+            return "at the beginning";
+        }
+        currentIndex -= 1;
+        return "Skipping back and playing " + songs.get(currentIndex - 1);
     }
 
-    @Override
+    /**
+     * Method to play next song
+     * 
+     * @return will return the albums next song
+     * 
+     */
     public String nextSong() {
-        return null;
+        if (currentIndex == songs.size()) {
+            for (int i = songs.size() + 1; i > songs.size(); i--) {
+                prevSong();
+            }
+
+        } else
+            currentIndex += 1;
+        return "Playing " + currentIndex + ": " + songs.get(currentIndex - 1);
     }
 
-    @Override
+    /**
+     * Method to pause current song
+     * 
+     * @return will return that the song is paused
+     */
     public String stop() {
-        return null;
+        return "Stopping";
     }
 
-    @Override
+    /**
+     * Method to end play session
+     * 
+     * @return will return that the session is stopping
+     */
     public String pause() {
-        return null;
+        return "Pausing";
     }
-    
+
 }
