@@ -11,6 +11,12 @@ public class CD implements DigitalAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
 
+    /**
+     * Constructor for CD
+     * 
+     * 
+     * @param songs is the arraylist of songs for the cd
+     */
     public CD(ArrayList<String> songs) {
         this.songs = songs;
         currentIndex = 0;

@@ -11,6 +11,11 @@ public class Cassett implements AnalogAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
 
+    /**
+     * Constructor for Cassett
+     * 
+     * @param songs is the arraylist of songs for cassett
+     */
     public Cassett(ArrayList<String> songs) {
         this.songs = songs;
         currentIndex = 0;
